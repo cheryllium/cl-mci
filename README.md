@@ -2,6 +2,7 @@
 Little Lisp mp3 library
 
 This simple library has functions that allow you to open, play, pause, stop, and close mp3 files. 
+It uses the native Windows sound API, so this library is meant to be used on Windows. 
 Simply load the file in order to use it. The following are descriptions of the functions included, 
 most of which shoud be pretty self-explanatory. 
 
