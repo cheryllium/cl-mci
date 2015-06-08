@@ -27,7 +27,7 @@
 (defun play-song () 
   (let ((status 
 	 (mci-send-string "open")))
-    (if (= status 0) 
+    (if (zerop status) 
 	1
 	(mci-send-string "play"))))
 
@@ -37,7 +37,7 @@
 ; This failure appears to be nondeterministic... 
 (defun play () 
   (if *song* 
-      (if (= (play-song) 0)
+      (if (zerop (play-song))
 	  0 
 	  (play)) 
       "Error: You must first specify a song with SET-SONG."))
